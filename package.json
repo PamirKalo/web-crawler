@@ -1,0 +1,29 @@
+{
+  "name": "sequelize-exercise-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add-migration": "node ./node_modules/sequelize-auto-migrations/bin/makemigration.js",
+    "migrate": "node_modules/.bin/sequelize db:migrate",
+    "update": "node update.js",
+    "showAllCars": "node showAllCars.js",
+    "sortByPrice": "node sortByPrice.js",
+    "findByYear": "node findByYear.js",
+    "findByProvider": "node findByProvider.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "eslint": "^4.18.2",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.6.2",
+    "mysql2": "^1.5.2",
+    "sequelize": "^4.36.0",
+    "sequelize-auto-migrations": "^1.0.2",
+    "sequelize-cli": "^4.0.0"
+  }
+}
