@@ -45,7 +45,6 @@ const getAdsFromAutoBg = async (url, arr) => {
     const $ = jQueryInit(dom.window); // create JQuery model
 
     if ($('.resultItem').length === 0) { // symptoms for the last ad page
-        console.log('alooooo');
         return arr;
     }
 
@@ -77,8 +76,11 @@ const getAdsFromAutoBg = async (url, arr) => {
 const getAllAds = async () => {
     const resultArrAutoBg = await getAdsFromAutoBg(urlAutoBg, []);
     const resultArrCarsBg = await getAdsFromCarsBg(urlCarsBg, []);
+    console.log([...resultArrCarsBg, ...resultArrAutoBg]);
     return [...resultArrCarsBg, ...resultArrAutoBg];
 };
+
+getAllAds();
 
 module.exports = {
     getAllAds,
